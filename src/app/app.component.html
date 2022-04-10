@@ -1,0 +1,14 @@
+<h1 class="text-center display-1 my-4 text-primary">Lanzadados Angular</h1>
+<div class="container d-flex justify-content-center">
+        <app-dado valor="{{valor1}}"></app-dado>
+        <app-dado valor="{{valor2}}"></app-dado>
+        <app-dado valor="{{valor3}}"></app-dado>
+</div>
+
+<div class="d-flex justify-content-center">
+        <button (click)="devolverDado()" class="btn btn-primary btn-lg p-4 my-5" id="boton"> ¡Lanzar Dados! </button>
+</div>
+
+
+<p *ngIf="valor1 !== valor2 && valor1 !== valor3" class="text-center display-6">Resultado: ¡Sigue participando!</p>
+<p *ngIf="valor1 === valor2 && valor1 === valor3" class="text-center display-6">Resultado: ¡{{resultado}}!  </p>
